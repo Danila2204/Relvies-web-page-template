@@ -10,21 +10,27 @@ export const path = {
         css: `${distFolder}/css/`,
         files: `${distFolder}/imports/`,
         js: `${distFolder}/js/`,
-        includes: `${distFolder}/`,
+        libraries: [
+            `${distFolder}/libraries/`
+        ]
     },
     src: {
         html: `${srcFolder}/*.html`,
         includes: `${srcFolder}/includes/**/*.*`,
         scss: `${srcFolder}/scss/style.scss`,
         js: `${srcFolder}/js/**/*.js`,
-        files: `${srcFolder}/imports/**/*.*`
+        files: `${srcFolder}/imports/**/*.*`,
+        libraries: [
+            `${srcFolder}/../node_modules/bootstrap/**/*.*`,
+            `${srcFolder}/../node_modules/normalize.css/**/*.*`
+        ]
     },
     watch: {
         html: `${srcFolder}/**/*.html`,
         scss: `${srcFolder}/scss/**/*.scss`,
         js: `${srcFolder}/js/**/*.js`,
         files: `${srcFolder}/imports/**/*.*`,
-        includes: `${srcFolder}/includes/**/*.*`
+        libraries: `${srcFolder}/libraries/**/*.*`
     },
     clean: distFolder,
     buildFolder: distFolder,
@@ -32,3 +38,4 @@ export const path = {
     watchFolder: rootFolder,
     ftp: ``
 };
+
