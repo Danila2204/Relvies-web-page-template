@@ -17,3 +17,25 @@
 .extra-bold {
   font-weight: 800;
 }
+
+.container {
+  max-width: 1090px;
+}
+@media (max-width: 575px) {
+  .container {
+    max-width: 340px;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.nav__item a {
+  font-size: 14px;
+  line-height: 24px;
+}

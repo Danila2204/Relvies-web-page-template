@@ -21,4 +21,28 @@ $second-text-color: #737373;
 .extra-bold {
     font-weight: 800;
 }
+
+.container {
+    max-width: 1090px;
+
+    @media (max-width: 575px) {
+        max-width: 340px;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
 // === / global ===
+// === header ===
+.nav {
+    &__item a {
+        font-size: 14px;
+        line-height: 24px;
+    }
+}
+// === / header ===
