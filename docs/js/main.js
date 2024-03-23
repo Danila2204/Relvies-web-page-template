@@ -16,14 +16,45 @@
   \*******************/
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n\n\n//# sourceURL=webpack:///./js/app.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _header_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./header.js */ \"./js/header.js\");\n\n\n//# sourceURL=webpack:///./js/app.js?");
+
+/***/ }),
+
+/***/ "./js/header.js":
+/*!**********************!*\
+  !*** ./js/header.js ***!
+  \**********************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n// DOM-элементы\r\nconst headerNavigationList = document.querySelector(\".nav__list\");\r\nconst headerNavigation = document.querySelector(\".header__nav\");\r\nconst headerContainer = document.querySelector(\".header__container\");\r\nconst headerNavigationLinks = document.querySelectorAll(\"a[data-display='mobile']\");\r\nconst listLinks = headerNavigationList.querySelectorAll(\".nav__item a\");\r\n\r\n// Функции\r\nfunction navgiation() {\r\n  let object = {\r\n    remove: false,\r\n    change() {``\r\n      if (innerWidth > 420) {\r\n        if (this.remove) {\r\n          headerNavigation.appendChild(headerNavigationList);\r\n          \r\n          for(let i = 0; i < listLinks.length; i++) {\r\n            listLinks[i].classList.add(\"semi-bold\");\r\n            listLinks[i].classList.remove(\"regular\");\r\n          }\r\n\r\n          this.remove = false;\r\n        }\r\n        for (let i = 0; i < headerNavigationLinks.length; i++) {\r\n          headerNavigationLinks[i].classList.add(\"d-none\");\r\n        }\r\n      } else {\r\n        if (!this.remove) {\r\n          headerNavigationList.parentElement.removeChild(headerNavigationList);\r\n          headerContainer.appendChild(headerNavigationList);\r\n          for(let i = 0; i < listLinks.length; i++) {\r\n            listLinks[i].classList.remove(\"semi-bold\");\r\n            listLinks[i].classList.add(\"regular\");\r\n          }\r\n\r\n          this.remove = true;\r\n        }\r\n        for (let i = 0; i < headerNavigationLinks.length; i++) {\r\n          headerNavigationLinks[i].classList.remove(\"d-none\");\r\n        }\r\n      }\r\n    }\r\n  }\r\n\r\n  return object;\r\n}\r\n\r\n// События\r\nlet navigationObject = navgiation();\r\nwindow.addEventListener(\"resize\", navigationObject.change.bind(navigationObject));\n\n//# sourceURL=webpack:///./js/header.js?");
 
 /***/ })
 
 /******/ 	});
 /************************************************************************/
-/******/ 	// The require scope
-/******/ 	var __webpack_require__ = {};
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 			// no module.id needed
+/******/ 			// no module.loaded needed
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
 /******/ 	
 /************************************************************************/
 /******/ 	/* webpack/runtime/make namespace object */
@@ -42,8 +73,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n\n\n//# sourceURL=webpack:///
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module can't be inlined because the eval devtool is used.
-/******/ 	var __webpack_exports__ = {};
-/******/ 	__webpack_modules__["./js/app.js"](0, __webpack_exports__, __webpack_require__);
+/******/ 	var __webpack_exports__ = __webpack_require__("./js/app.js");
 /******/ 	
 /******/ })()
 ;

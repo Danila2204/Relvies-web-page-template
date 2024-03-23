@@ -6,22 +6,26 @@
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="./node_modules/normalize.css/normalize.css">
     <link rel="icon" href="./imports/img/Header/shop-twotone.svg">
-    <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/custom.css">
+    <link rel="stylesheet" href="./css/style.css">
     <title>Relvise</title>
 </head>
 <body>
     <header class="header">
-        <div class="container">
+        <div class="header__container d-flex flex-column container">
             <nav class="header__nav d-flex justify-content-between">
-                <p class="bold nav-logo">Relvise</p>
-                <ul class="nav__list row">
-                    <li class="nav__item col"><a href="#" class="text-dark semi-bold">Home</a></li>
-                    <li class="nav__item col"><a href="#" class="text-dark semi-bold">Product</a></li>
-                    <li class="nav__item col"><a href="#" class="text-dark semi-bold">Pricing</a></li>
-                    <li class="nav__item col"><a href="#" class="text-dark semi-bold">Contact</a></li>
+                <p class="bold nav-logo order-1">Relvise</p>
+                <ul class="nav__list p-0 flex-sm-row flex-column justify-content-between row order-2">
+                    <li class="nav__item d-flex justify-content-center col"><a href="#" class="semi-bold">Home</a></li>
+                    <li class="nav__item d-flex justify-content-center col"><a href="#" class="semi-bold">Product</a></li>
+                    <li class="nav__item d-flex justify-content-center col"><a href="#" class="semi-bold">Pricing</a></li>
+                    <li class="nav__item d-flex justify-content-center col"><a href="#" class="semi-bold">Contact</a></li>
                 </ul>
-                <img src="../imports/img/Header/navbar-toggler-icon.svg" alt="navbar-toggler-icon">
+                <div class="nav__icons d-flex justify-content-between order-3">
+                    <a href="#" data-display="mobile"><img src="../imports/img/Header/Mobile/icon-search.svg" alt="search"></a>
+                    <a href="#" data-display="mobile"><img src="../imports/img/Header/Mobile/icon-shopping.svg" alt="shopping"></a>
+                    <a href="#"><img src="../imports/img/Header/navbar-toggler-icon.svg" alt="navbar-toggler-icon"></a>
+                </div>
             </nav>
         </div>
     </header>

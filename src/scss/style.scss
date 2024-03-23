@@ -22,6 +22,10 @@ $second-text-color: #737373;
     font-weight: 800;
 }
 
+.text-secondary {
+    color: #737373;
+}
+
 .container {
     max-width: 1090px;
 
@@ -39,10 +43,34 @@ ul {
 }
 // === / global ===
 // === header ===
+.header {
+    @media (max-width: 420px) {
+        background-color: #f6f6f6;
+    }
+}
+
 .nav {
+    &__list {
+        align-items: center;
+    }
+
     &__item a {
         font-size: 14px;
         line-height: 24px;
+        color: $second-text-color;
+
+        @media (max-width: 420px) {
+            font-size: 30px;
+            line-height: 45px;
+        }
+    }
+
+    &__icons {
+        & > *:not(:last-child) {
+            @media (max-width: 420px) {
+                margin-right: 28px;
+            }
+        }
     }
 }
 // === / header ===

@@ -18,6 +18,10 @@
   font-weight: 800;
 }
 
+.text-secondary {
+  color: #737373;
+}
+
 .container {
   max-width: 1090px;
 }
@@ -35,7 +39,28 @@ ul {
   list-style: none;
 }
 
+@media (max-width: 420px) {
+  .header {
+    background-color: #f6f6f6;
+  }
+}
+
+.nav__list {
+  align-items: center;
+}
 .nav__item a {
   font-size: 14px;
   line-height: 24px;
+  color: #737373;
+}
+@media (max-width: 420px) {
+  .nav__item a {
+    font-size: 30px;
+    line-height: 45px;
+  }
+}
+@media (max-width: 420px) {
+  .nav__icons > *:not(:last-child) {
+    margin-right: 28px;
+  }
 }
