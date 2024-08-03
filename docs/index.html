@@ -3,32 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="./node_modules/normalize.css/normalize.css">
     <link rel="icon" href="./imports/img/Header/shop-twotone.svg">
-    <link rel="stylesheet" href="./css/custom.css">
     <link rel="stylesheet" href="./css/style.css">
     <title>Relvise</title>
 </head>
 <body>
+    <!-- header -->
     <header class="header">
-        <div class="header__container d-flex flex-column container">
-            <nav class="header__nav d-flex justify-content-between">
+        <div class="header__container d-flex flex-column">
+            <nav class="header__nav container d-flex justify-content-between order-1">
                 <p class="bold nav-logo order-1">Relvise</p>
-                <ul class="nav__list p-0 flex-sm-row flex-column justify-content-between row order-2">
-                    <li class="nav__item d-flex justify-content-center col"><a href="#" class="semi-bold">Home</a></li>
-                    <li class="nav__item d-flex justify-content-center col"><a href="#" class="semi-bold">Product</a></li>
-                    <li class="nav__item d-flex justify-content-center col"><a href="#" class="semi-bold">Pricing</a></li>
-                    <li class="nav__item d-flex justify-content-center col"><a href="#" class="semi-bold">Contact</a></li>
+                <ul class="nav__list container p-0 flex-md-row flex-column justify-content-between row order-2">
+                    <li class="nav__item d-flex justify-content-center col"><a href="#" class="semi-bold text-three">Home</a></li>
+                    <li class="nav__item d-flex justify-content-center col"><a href="#" class="semi-bold text-three">Product</a></li>
+                    <li class="nav__item d-flex justify-content-center col"><a href="#" class="semi-bold text-three">Pricing</a></li>
+                    <li class="nav__item d-flex justify-content-center col"><a href="#" class="semi-bold text-three">Contact</a></li>
                 </ul>
                 <div class="nav__icons d-flex justify-content-between order-3">
-                    <a href="#" data-display="mobile"><img src="../imports/img/Header/Mobile/icon-search.svg" alt="search"></a>
-                    <a href="#" data-display="mobile"><img src="../imports/img/Header/Mobile/icon-shopping.svg" alt="shopping"></a>
-                    <a href="#"><img src="../imports/img/Header/navbar-toggler-icon.svg" alt="navbar-toggler-icon"></a>
+                    <a href="#" class="d-md-none me-4" data-display="mobile"><img src="./imports/img/Header/Mobile/icon-search.svg" alt="search"></a>
+                    <a href="#" class="d-md-none me-4" data-display="mobile"><img src="./imports/img/Header/Mobile/icon-shopping.svg" alt="shopping"></a>
+                    <a href="#"><img src="./imports/img/Header/navbar-toggler-icon.svg" alt="navbar-toggler-icon"></a>
                 </div>
             </nav>
+            <div class="header__content container d-flex flex-column align-items-center align-items-md-start order-3 w-100">
+                <h1 class="header__title extra-bold text__dark">Finance and Consultancy Solution</h1>
+                <p class="header__subtitle medium text-three">We know how large objects will act, but things on a small scale.</p>
+                <div class="header__buttons d-flex flex-md-row flex-column align-items-center">
+                    <button class="button mb-3 mb-md-0 me-md-3 me-0 button__circle bg-primary text-light bold border-0">Get Quote Now</button>
+                    <button class="button button__circle border-secondary text-secondary bold bg-transparent">Learn More</button>
+                </div>                
+                <div class="header__content-cards align-items-center justify-content-center d-flex flex-md-row flex-column">
+                    <div class="header__content-card justify-content-center d-flex flex-column align-items-start bg-light">
+                        <img src="./imports/img/Header/carbon_tool-box.svg" alt="icon" class="header__content-icon">
+                        <p class="header__content-card-title bold">Environmental Consulting</p>
+                        <p class="header__content-card-subtitle medium text-three">
+                            We focus on ergonomics and meeting you where you work. 
+                        </p>
+                    </div>
+                    <div class="header__content-card d-flex flex-column align-items-start bg-light">
+                        <img src="./imports/img/Header/shop-twotone.svg" alt="icon" class="header__content-icon">
+                        <p class="header__content-card-title bold">Environmental Consulting</p>
+                        <p class="header__content-card-subtitle medium text-three">
+                            We focus on ergonomics and meeting you where you work. 
+                        </p>
+                    </div>
+                    <div class="header__content-card d-flex flex-column align-items-start bg-secondary">
+                        <img src="./imports/img/Header/carbon_notebook.svg" alt="icon" class="header__content-icon">
+                        <p class="header__content-card-title bold text-light">Environmental Consulting</p>
+                        <p class="header__content-card-subtitle medium text-light">
+                            We focus on ergonomics and meeting you where you work. 
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
+    <!-- / header -->
+    <!-- designing -->
+    <section class="designing d-flex justify-content-center">
+        <div class="designing__container container d-flex flex-column container">
+            <div class="designing__text d-flex flex-column align-items-center">
+                <p class="designing__title title">Designing Better Experience</p>
+                <p class="designing__subtitle subtitle text-three">
+                    Problems trying to resolve the conflict between the two major realms 
+                    of Classical physics: Newtonian mechanics
+                </p>
+            </div>
+            <div class="designing__cards flex-wrap d-flex justify-content-between row">
+                    <div class="designing__card d-flex flex-column align-items-center justify-content-center">
+                        <img src="./imports/img/Designing/icon-settings.svg" alt="people" class="card__img">
+                        <p class="card__title title">972 +</p>
+                        <p class="card__subtitle bold text-three">
+                            Save money and time
+                        </p>
+                    </div>
+                    <div class="designing__card d-flex flex-column align-items-center justify-content-center">
+                        <img src="./imports/img/Designing/icon-stats.svg" alt="people" class="card__img">
+                        <p class="card__title title">972 +</p>
+                        <p class="card__subtitle bold text-three">
+                            Travel & Aviation
+                        </p>
+                    </div>
+                    <div class="designing__card d-flex flex-column align-items-center justify-content-center">
+                        <img src="./imports/img/Designing/icon-award.svg" alt="people" class="card__img">
+                        <p class="card__title title">972 +</p>
+                        <p class="card__subtitle bold text-three">
+                            Consumer Products
+                        </p>
+                    </div>
+                    <div class="designing__card d-flex flex-column align-items-center justify-content-center">
+                        <img src="./imports/img/Designing/icon-box.svg" alt="people" class="card__img">
+                        <p class="card__title title">972 +</p>
+                        <p class="card__subtitle bold text-three">
+                            Financial Services
+                        </p>
+                    </div>
+            </div>
+        </div>
+    </section>
+    <!-- / designing -->
     <script src="./js/main.js"></script>
 </body>
 </html>

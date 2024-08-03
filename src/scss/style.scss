@@ -1,7 +1,13 @@
-// === variables ===
-$second-text-color: #737373;
-// === / variables ===
+// === imports ===
+@import "custom";
+// === / imports ===
 // === global ===
+.w-md-100 {
+    @include media-breakpoint-down(md) {
+        width: 100%;
+    }
+}
+
 .regular {
     font-weight: 400;
 }
@@ -22,15 +28,24 @@ $second-text-color: #737373;
     font-weight: 800;
 }
 
-.text-secondary {
+.text-three {
     color: #737373;
+}
+
+.button {
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    &__circle {
+        border-radius: 37px;
+    }
 }
 
 .container {
     max-width: 1090px;
 
-    @media (max-width: 575px) {
-        max-width: 340px;
+    @include media-breakpoint-down(sm) {
+        // max-width: 340px;
     }
 }
 
@@ -41,11 +56,90 @@ a {
 ul {
     list-style: none;
 }
+
+h1 {
+    font-size: 56px;
+    line-height: 80px;
+}
+
+.title {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 57px;
+}
+
+.subtitle {
+    font-weight: 500;
+    line-height: 20px;
+    font-size: 14px;
+    text-align: center;
+    max-width: 510px;
+}
 // === / global ===
 // === header ===
 .header {
-    @media (max-width: 420px) {
-        background-color: #f6f6f6;
+    background-color: #f6f6f6;
+
+    &__background {
+        background-image: url("../imports/img/Header/background.svg");
+        background-size: cover;
+    }
+
+    &__title {
+        max-width: 395px;
+        margin: 0;
+        word-wrap: break-word;
+
+        @include media-breakpoint-down(sm) {
+            font-size: 40px;
+            max-width: 270px;
+        }
+    }
+
+    &__subtitle {
+        line-height: 30px;
+        font-size: 20px;
+        max-width: 375px;
+    }
+
+    &__content {
+        @include media-breakpoint-down(md) {
+            padding-top: 80px;
+        }
+
+        &-cards {
+            margin: 48px 0 -130px;
+            
+            @include media-breakpoint-down(md) {
+                margin: 80px 0;
+            }
+        }
+        
+        &-card {
+            max-width: 328px;
+            padding: 35px 40px;
+            box-shadow: 0 13px 19px rgba(0, 0, 0, .07);
+
+            &:not(:last-child) {
+                margin-right: 30px;
+
+                @include media-breakpoint-down(md) {
+                    margin-right: 0;
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+
+    &__buttons {
+
+        & > button {
+            padding-left: 35px;
+            padding-right: 35px;
+            font-size: 14px;
+            line-height: 28px;
+        }
     }
 }
 
@@ -57,9 +151,8 @@ ul {
     &__item a {
         font-size: 14px;
         line-height: 24px;
-        color: $second-text-color;
 
-        @media (max-width: 420px) {
+        @include media-breakpoint-down(md) {
             font-size: 30px;
             line-height: 45px;
         }
@@ -67,10 +160,39 @@ ul {
 
     &__icons {
         & > *:not(:last-child) {
-            @media (max-width: 420px) {
+            @include media-breakpoint-down(xs) {
                 margin-right: 28px;
             }
         }
     }
 }
 // === / header ===
+// === designing ===
+.designing {
+    margin: 0px 0 0;
+    padding: 210px 0 60px;
+    background-color: #f3f3f3;
+    
+    &__cards {
+        @media (max-width: 476px) {
+            justify-content: center !important;
+        }
+    }
+
+    &__card {
+        background-color: #fff;
+        max-width: 230px;
+        height: 210px;
+
+        @media (max-width: 936px) {
+            margin-bottom: 30px;
+        }
+    }
+}
+
+.card {
+    &__subtitle {
+        line-height: 24px;
+    }
+}
+// === / designing ===

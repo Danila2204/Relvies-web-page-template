@@ -1,4 +1,6 @@
 // DOM-элементы
+const header = document.querySelector(".header");
+const headerContent = document.querySelector(".header__content");
 const headerNavigationList = document.querySelector(".nav__list");
 const headerNavigation = document.querySelector(".header__nav");
 const headerContainer = document.querySelector(".header__container");
@@ -8,35 +10,26 @@ const listLinks = headerNavigationList.querySelectorAll(".nav__item a");
 // Функции
 function navgiation() {
   let object = {
-    remove: false,
-    change() {``
-      if (innerWidth > 420) {
-        if (this.remove) {
+    change() {
+      if (document.documentElement.clientWidth > 767) {
+          console.log((document.documentElement.clientWidth))
+          headerContent.classList.remove("header__background");
+          header.classList.add("header__background");
           headerNavigation.appendChild(headerNavigationList);
           
           for(let i = 0; i < listLinks.length; i++) {
             listLinks[i].classList.add("semi-bold");
             listLinks[i].classList.remove("regular");
-          }
-
-          this.remove = false;
-        }
-        for (let i = 0; i < headerNavigationLinks.length; i++) {
-          headerNavigationLinks[i].classList.add("d-none");
-        }
+          }          
       } else {
-        if (!this.remove) {
-          headerNavigationList.parentElement.removeChild(headerNavigationList);
-          headerContainer.appendChild(headerNavigationList);
-          for(let i = 0; i < listLinks.length; i++) {
-            listLinks[i].classList.remove("semi-bold");
-            listLinks[i].classList.add("regular");
-          }
+        header.classList.remove("header__background");
+        headerContent.classList.add("header__background");
+        headerNavigationList.parentElement.removeChild(headerNavigationList);
+        headerContainer.appendChild(headerNavigationList);
 
-          this.remove = true;
-        }
-        for (let i = 0; i < headerNavigationLinks.length; i++) {
-          headerNavigationLinks[i].classList.remove("d-none");
+        for(let i = 0; i < listLinks.length; i++) {
+          listLinks[i].classList.remove("semi-bold");
+          listLinks[i].classList.add("regular");
         }
       }
     }
@@ -47,4 +40,5 @@ function navgiation() {
 
 // События
 let navigationObject = navgiation();
+navigationObject.change();
 window.addEventListener("resize", navigationObject.change.bind(navigationObject));
