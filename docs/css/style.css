@@ -11968,6 +11968,7 @@ h1, .h1 {
 }
 .header__content-card {
   max-width: 328px;
+  height: 242px;
   padding: 35px 40px;
   box-shadow: 0 13px 19px rgba(0, 0, 0, 0.07);
 }
@@ -11979,6 +11980,9 @@ h1, .h1 {
     margin-right: 0;
     margin-bottom: 30px;
   }
+}
+.header__content-card-title {
+  margin: 10px 0;
 }
 .header__buttons > button {
   padding-left: 35px;
@@ -12143,4 +12147,11 @@ h1, .h1 {
 }
 .we__content-description-description-item-text-title {
   margin-bottom: 5px;
+}
+
+.clients .container {
+  padding: 50px 25px;
+}
+.clients .container a:not(:last-child) {
+  margin-bottom: 60px;
 }
