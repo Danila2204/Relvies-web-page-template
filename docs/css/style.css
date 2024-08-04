@@ -11896,6 +11896,10 @@ textarea.form-control-lg {
   max-width: 1090px;
 }
 
+p {
+  margin: 0;
+}
+
 a {
   text-decoration: none;
 }
@@ -11914,6 +11918,7 @@ h1, .h1 {
   font-size: 40px;
   font-weight: 700;
   line-height: 57px;
+  margin-bottom: 10px;
 }
 
 .subtitle {
@@ -11934,7 +11939,7 @@ h1, .h1 {
 }
 .header__title {
   max-width: 395px;
-  margin: 0;
+  margin: 0 0 35px;
   word-wrap: break-word;
 }
 @media (max-width: 575.98px) {
@@ -12014,6 +12019,15 @@ h1, .h1 {
     justify-content: center !important;
   }
 }
+.designing__subtitle {
+  line-height: 24px;
+  margin-bottom: 50px;
+}
+@media (max-width: 767.98px) {
+  .designing__subtitle {
+    margin-bottom: 75px;
+  }
+}
 .designing__card {
   background-color: #fff;
   max-width: 230px;
@@ -12025,10 +12039,6 @@ h1, .h1 {
   }
 }
 
-.card__subtitle {
-  line-height: 24px;
-}
-
 .practice {
   background: #fafafa;
   padding: 125px 0 80px;
@@ -12036,6 +12046,14 @@ h1, .h1 {
 @media (max-width: 767.98px) {
   .practice {
     padding: 100px 0;
+  }
+}
+.practice .subtitle {
+  margin-bottom: 45px;
+}
+@media (max-width: 767.98px) {
+  .practice .subtitle {
+    margin-bottom: 75px;
   }
 }
 @media (max-width: 503px) {
@@ -12063,4 +12081,66 @@ h1, .h1 {
   line-height: 20px;
   max-width: 160px;
   text-align: left;
+}
+
+.we .container {
+  padding: 100px 0;
+  padding-bottom: 214px;
+}
+.we__text {
+  margin-bottom: 100px;
+}
+.we__title {
+  margin-bottom: 15px;
+}
+.we__content {
+  justify-content: center !important;
+}
+.we__content-video {
+  position: relative;
+  background: url("../imports/img/We/video.png");
+  background-position: center center;
+  width: clamp(333px, 41vw, 597px);
+  height: 442px;
+  margin-bottom: 72px;
+}
+.we__content-video::before {
+  content: "";
+  cursor: pointer;
+  position: absolute;
+  display: block;
+  width: 98px;
+  height: 98px;
+  background: #0D5C63;
+  border-radius: 50%;
+}
+.we__content-video::after {
+  content: "";
+  cursor: pointer;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 14px solid transparent;
+  border-left: 24px solid transparent;
+  border-right: 0;
+  border-left-color: #fff;
+  z-index: 2;
+}
+.we__content-description-text {
+  margin-bottom: 50px;
+}
+.we__content-description-text-subtitle {
+  max-width: 330px;
+}
+.we__content-description-description-item:not(:last-child) {
+  margin-bottom: 30px;
+}
+.we__content-description-description-item img {
+  margin-right: 20px;
+}
+.we__content-description-description-item-text p {
+  max-width: 277px;
+}
+.we__content-description-description-item-text-title {
+  margin-bottom: 5px;
 }

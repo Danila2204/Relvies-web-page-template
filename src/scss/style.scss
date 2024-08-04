@@ -45,6 +45,10 @@
     max-width: 1090px;
 }
 
+p {
+    margin: 0;
+}
+
 a {
     text-decoration: none;
 }
@@ -63,6 +67,7 @@ h1 {
     font-size: 40px;
     font-weight: 700;
     line-height: 57px;
+    margin-bottom: 10px;
 }
 
 .subtitle {
@@ -85,7 +90,7 @@ h1 {
 
     &__title {
         max-width: 395px;
-        margin: 0;
+        margin: 0 0 35px;
         word-wrap: break-word;
 
         @include media-breakpoint-down(sm) {
@@ -180,6 +185,15 @@ h1 {
         }
     }
 
+    &__subtitle {
+        line-height: 24px;
+        margin-bottom: 50px;
+    
+        @include media-breakpoint-down(md) {
+            margin-bottom: 75px;
+        }
+    }
+
     &__card {
         background-color: #fff;
         max-width: 230px;
@@ -193,11 +207,6 @@ h1 {
     }
 }
 
-.card {
-    &__subtitle {
-        line-height: 24px;
-    }
-}
 // === / designing ===
 // === practice ===
 .practice {
@@ -206,6 +215,14 @@ h1 {
 
     @include media-breakpoint-down(md) {
         padding: 100px 0;
+    }
+
+    .subtitle {
+        margin-bottom: 45px;
+
+        @include media-breakpoint-down(md) {
+            margin-bottom: 75px;
+        }
     }
 
     &__cards {
@@ -240,3 +257,97 @@ h1 {
     }
 }
 // === / practice ===
+// === we ===
+.we {
+    .container {
+        padding: 100px 0;
+
+        @include media-breakpoint-down(925px) {
+            padding-bottom: 214px;
+        }
+    }
+
+    &__text {
+        margin-bottom: 100px;
+    }
+
+    &__title {
+        margin-bottom: 15px;
+    }
+    
+    &__content {
+        &-video {
+            position: relative;
+            background: url("../imports/img/We/video.png");
+            background-position: center center;
+            width: clamp(333px, 41vw, 597px);
+            height: 442px;
+
+            @include media-breakpoint-down(925px) {
+                margin-bottom: 72px;
+            }
+            
+            &::before {
+                content: "";
+                cursor: pointer;
+                position: absolute;
+                display: block;
+                width: 98px;
+                height: 98px;
+                background: #0D5C63;
+                border-radius: 50%;
+            }
+            
+            &::after {
+                content: "";
+                cursor: pointer;
+                position: absolute;
+                width: 0;
+                height: 0;
+                border: 14px solid transparent;
+                border-left: 24px solid transparent;
+                border-right: 0;
+                border-left-color: #fff;
+                z-index: 2;
+            }
+        }
+        
+        &-description {
+            &-text {
+                margin-bottom: 50px;
+
+                &-subtitle {
+                    max-width: 330px;
+                }
+            }
+
+            &-description {
+                
+                &-item {
+                    &:not(:last-child) {
+                        margin-bottom: 30px;
+                    }
+
+                    img {
+                        margin-right: 20px;
+                    }
+
+                    &-text {
+                        p {
+                            max-width: 277px;
+                        }
+
+                        &-title {
+                            margin-bottom: 5px;
+                        }
+                    }
+                }
+            }
+        }
+
+        @include media-breakpoint-down(925px) {
+            justify-content: center !important;
+        }
+    }
+}
+// === / we ===
