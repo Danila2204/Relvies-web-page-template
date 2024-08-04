@@ -11939,7 +11939,6 @@ h1, .h1 {
 }
 .header__title {
   max-width: 395px;
-  margin: 0 0 35px;
   word-wrap: break-word;
 }
 @media (max-width: 575.98px) {
@@ -11952,6 +11951,12 @@ h1, .h1 {
   line-height: 30px;
   font-size: 20px;
   max-width: 375px;
+  margin: 35px 0;
+}
+@media (max-width: 767.98px) {
+  .header__subtitle {
+    margin: 40px 0;
+  }
 }
 @media (max-width: 767.98px) {
   .header__content {
@@ -12150,8 +12155,86 @@ h1, .h1 {
 }
 
 .clients .container {
-  padding: 50px 25px;
+  padding: 50px 25px 70px;
 }
 .clients .container a:not(:last-child) {
   margin-bottom: 60px;
+}
+
+.subscribe {
+  position: relative;
+}
+.subscribe__text {
+  color: #fff;
+  font-size: 24px;
+  line-height: 32px;
+  max-width: 266px;
+  margin-bottom: 0;
+}
+@media (min-width: 767px) and (max-width: 958px) {
+  .subscribe__text {
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 668px) {
+  .subscribe__text {
+    margin-bottom: 30px;
+  }
+}
+.subscribe .container {
+  width: 68vw;
+  padding: 30px 50px 30px 40px;
+  border-radius: 2px;
+  z-index: 2;
+  background-color: #17213C;
+}
+@media (min-width: 767px) and (max-width: 958px) {
+  .subscribe .container {
+    justify-content: center !important;
+  }
+}
+@media (max-width: 668px) {
+  .subscribe .container {
+    justify-content: center !important;
+  }
+}
+@media (max-width: 767.98px) {
+  .subscribe .container {
+    width: 100%;
+  }
+}
+.subscribe-form__email {
+  height: 58px;
+  border: 1px solid #e6e6e6;
+  border-radius: 5px 0 0 5px;
+}
+.subscribe-form__email::placeholder {
+  padding: 15px 20px;
+  color: #737373;
+  font-size: 14px;
+}
+.subscribe-form__submit {
+  height: 58px;
+  background-color: rgb(var(--bs-primary-rgb));
+  color: #fff;
+  border-color: #e6e6e6;
+  border-radius: 0 5px 5px 0;
+  font-size: 14px;
+}
+.subscribe::before {
+  content: "";
+  position: absolute;
+  display: block;
+  bottom: 0;
+  height: 77px;
+  width: 100%;
+  display: block;
+  margin-bottom: -20px;
+  background: #252B42;
+  z-index: -1;
+}
+@media (max-width: 767.98px) {
+  .subscribe::before {
+    display: none;
+  }
 }

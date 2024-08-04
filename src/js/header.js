@@ -12,7 +12,6 @@ function navgiation() {
   let object = {
     change() {
       if (document.documentElement.clientWidth > 767) {
-          console.log((document.documentElement.clientWidth))
           headerContent.classList.remove("header__background");
           header.classList.add("header__background");
           headerNavigation.appendChild(headerNavigationList);
