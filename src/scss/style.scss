@@ -610,3 +610,29 @@ h1 {
     }
 }
 // === / footer ===
+// === ps ===
+.ps {
+    padding: 25px 0;
+
+    &__text {
+        @extend .semi-bold;
+        font-size: 14px;
+        color: #737373;
+
+        @media (max-width: 554.5px) {
+            margin-bottom: 50px;
+        }
+    }
+
+    @include media-breakpoint-down(md) {
+        padding-bottom: 55px;
+    }
+}
+
+.socials {
+    img:not(:last-child) {
+        cursor: pointer;
+        margin-right: 20px;
+    }
+}
+// === / ps ===

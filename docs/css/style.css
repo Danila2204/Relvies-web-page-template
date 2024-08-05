@@ -11868,7 +11868,7 @@ textarea.form-control-lg {
   font-weight: 500;
 }
 
-.semi-bold {
+.semi-bold, .ps__text {
   font-weight: 600;
 }
 
@@ -12364,4 +12364,27 @@ h1, .h1 {
 }
 .footer .container > .footer__navigation {
   margin-bottom: 0;
+}
+
+.ps {
+  padding: 25px 0;
+}
+.ps__text {
+  font-size: 14px;
+  color: #737373;
+}
+@media (max-width: 554.5px) {
+  .ps__text {
+    margin-bottom: 50px;
+  }
+}
+@media (max-width: 767.98px) {
+  .ps {
+    padding-bottom: 55px;
+  }
+}
+
+.socials img:not(:last-child) {
+  cursor: pointer;
+  margin-right: 20px;
 }
