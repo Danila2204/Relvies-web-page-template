@@ -362,6 +362,8 @@ h1 {
 // === / we ===
 // === clients ===
 .clients {
+    background-color: #fafafa;
+
     .container {
         padding: 50px 25px 70px;
 
@@ -376,6 +378,7 @@ h1 {
 // === subscribe ===
 .subscribe {
     position: relative;
+    background: #fafafa;
 
     &__text {
         color: #fff;
@@ -394,6 +397,7 @@ h1 {
     }
 
     .container {
+        position: relative;
         width: 68vw;
         padding: 30px 50px 30px 40px;
         border-radius: 2px;
@@ -419,6 +423,11 @@ h1 {
             border: 1px solid #e6e6e6;
             border-radius: 5px 0 0 5px;
             
+            @media (max-width: 391.5px) {
+                margin-bottom: 20px;
+                border-radius: 5px;
+            }
+            
             &::placeholder {
                 padding: 15px 20px;
                 color: #737373;
@@ -433,6 +442,10 @@ h1 {
             border-color: #e6e6e6;
             border-radius: 0 5px 5px 0;
             font-size: 14px;
+
+            @media (max-width: 391.5px) {
+                border-radius: 5px;
+            }
         }
     }
 
@@ -446,7 +459,7 @@ h1 {
         display: block;
         margin-bottom: -20px;
         background: #252B42;
-        z-index: -1;
+        z-index: 0;
 
         @include media-breakpoint-down(md) {
             display: none;
@@ -454,3 +467,74 @@ h1 {
     }
 }
 // === / subscribe ===
+// === contacts ===
+.contacts {
+    background: #f3f3f3;
+    padding-top: 100px;
+
+    @include media-breakpoint-down(md) {
+        padding-top: 95px;
+    }
+
+    &__content {
+        &-card {
+            cursor: pointer;
+            transition: .5s;
+            background: #fff;
+            padding: 50px 52px;
+
+            @media (max-width: 999px) {
+                &:not(:last-child) {
+                    margin-bottom: 30px;
+                }
+            }
+
+            &:hover {
+                background: #252B42;
+                transform: scaleY(1.18);
+
+                & > * {
+                    transform: scaleY(0.84);
+                }
+
+                p {
+                    color: #fff;
+                }
+            }
+
+            &-button {
+                border-radius: 5px;
+                border: 1px solid rgb(var(--bs-primary-rgb));
+                color: rgb(var(--bs-primary-rgb));
+                background-color: transparent;
+
+                &:hover {
+                    border-color: #fff;
+                    color: #fff;
+                }
+            }
+
+            p {
+                color: #000;
+                font-size: 14px;
+            }
+
+            & > *:not(:last-child) {
+                margin-bottom: 15px;
+            }
+        }
+
+        &-cards {
+            margin: 110px 0 180px;
+
+            @include media-breakpoint-down(999px) {
+                justify-content: space-evenly !important;
+            }
+
+            @include media-breakpoint-down(md) {
+                margin: 60px 0 130px;
+            }
+        }
+    }
+}
+// === / contacts ===

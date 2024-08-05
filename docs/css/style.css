@@ -12154,6 +12154,9 @@ h1, .h1 {
   margin-bottom: 5px;
 }
 
+.clients {
+  background-color: #fafafa;
+}
 .clients .container {
   padding: 50px 25px 70px;
 }
@@ -12163,6 +12166,7 @@ h1, .h1 {
 
 .subscribe {
   position: relative;
+  background: #fafafa;
 }
 .subscribe__text {
   color: #fff;
@@ -12182,6 +12186,7 @@ h1, .h1 {
   }
 }
 .subscribe .container {
+  position: relative;
   width: 68vw;
   padding: 30px 50px 30px 40px;
   border-radius: 2px;
@@ -12208,6 +12213,12 @@ h1, .h1 {
   border: 1px solid #e6e6e6;
   border-radius: 5px 0 0 5px;
 }
+@media (max-width: 391.5px) {
+  .subscribe-form__email {
+    margin-bottom: 20px;
+    border-radius: 5px;
+  }
+}
 .subscribe-form__email::placeholder {
   padding: 15px 20px;
   color: #737373;
@@ -12221,6 +12232,11 @@ h1, .h1 {
   border-radius: 0 5px 5px 0;
   font-size: 14px;
 }
+@media (max-width: 391.5px) {
+  .subscribe-form__submit {
+    border-radius: 5px;
+  }
+}
 .subscribe::before {
   content: "";
   position: absolute;
@@ -12231,10 +12247,67 @@ h1, .h1 {
   display: block;
   margin-bottom: -20px;
   background: #252B42;
-  z-index: -1;
+  z-index: 0;
 }
 @media (max-width: 767.98px) {
   .subscribe::before {
     display: none;
+  }
+}
+
+.contacts {
+  background: #f3f3f3;
+  padding-top: 100px;
+}
+@media (max-width: 767.98px) {
+  .contacts {
+    padding-top: 95px;
+  }
+}
+.contacts__content-card {
+  cursor: pointer;
+  transition: 0.5s;
+  background: #fff;
+  padding: 50px 52px;
+}
+@media (max-width: 999px) {
+  .contacts__content-card:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+.contacts__content-card:hover {
+  background: #252B42;
+  transform: scaleY(1.18);
+}
+.contacts__content-card:hover > * {
+  transform: scaleY(0.84);
+}
+.contacts__content-card:hover p {
+  color: #fff;
+}
+.contacts__content-card-button {
+  border-radius: 5px;
+  border: 1px solid rgb(var(--bs-primary-rgb));
+  color: rgb(var(--bs-primary-rgb));
+  background-color: transparent;
+}
+.contacts__content-card-button:hover {
+  border-color: #fff;
+  color: #fff;
+}
+.contacts__content-card p {
+  color: #000;
+  font-size: 14px;
+}
+.contacts__content-card > *:not(:last-child) {
+  margin-bottom: 15px;
+}
+.contacts__content-cards {
+  margin: 110px 0 180px;
+  justify-content: space-evenly !important;
+}
+@media (max-width: 767.98px) {
+  .contacts__content-cards {
+    margin: 60px 0 130px;
   }
 }
