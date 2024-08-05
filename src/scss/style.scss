@@ -55,6 +55,8 @@ a {
 
 ul {
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 h1 {
@@ -540,8 +542,7 @@ h1 {
 // === / contacts ===
 // === consulting ===
 .consulting {
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding: 40px 0;
 
     &__text {
         @media (max-width: 672px) {
@@ -562,3 +563,50 @@ h1 {
     }
 }
 // === / consulting ===
+// === footer ===
+.footer {
+    padding: 50px 0;
+    background: #17213C;
+    color: #fff;
+    
+    .container > * {
+        flex-grow: 1;
+
+        &:not(:last-child) {
+            margin-right: clamp(1px, 5vw, 80px);
+        }
+    }
+
+    &__navigation {
+        @media (max-width: 907px) {
+            margin-bottom: 30px;
+        }    
+
+        &-item {
+            & + & {
+                margin-top: 10px;
+            }
+
+            a {
+                color: #fff;
+            }
+
+            &-head {
+                @extend .bold;
+                line-height: 24px;
+                margin-bottom: 20px;
+            }
+
+            img {
+                margin-right: 10px;
+            }
+        }
+    }
+
+    .container {
+        & > .footer__navigation {
+            margin-bottom: 0;
+        }
+    }
+}
+// === / footer ===
