@@ -538,3 +538,27 @@ h1 {
     }
 }
 // === / contacts ===
+// === consulting ===
+.consulting {
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    &__text {
+        @media (max-width: 672px) {
+            margin-bottom: 50px;
+        }
+    }
+
+    &__title {
+        font-size: 24px;
+    }
+
+    &__button {
+        padding: 15px 40px;
+        font-size: 14px;
+        border: none;
+        background: rgb(var(--bs-primary-rgb));
+        color: #fff;
+    }
+}
+// === / consulting ===

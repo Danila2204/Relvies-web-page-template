@@ -12311,3 +12311,23 @@ h1, .h1 {
     margin: 60px 0 130px;
   }
 }
+
+.consulting {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+@media (max-width: 672px) {
+  .consulting__text {
+    margin-bottom: 50px;
+  }
+}
+.consulting__title {
+  font-size: 24px;
+}
+.consulting__button {
+  padding: 15px 40px;
+  font-size: 14px;
+  border: none;
+  background: rgb(var(--bs-primary-rgb));
+  color: #fff;
+}
